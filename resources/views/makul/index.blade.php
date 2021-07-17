@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">Data Makul
+                <div class="card-header bg-success text-white font-weight-bold">Data Makul
                 
                 <a href="{{ route('tambah.makul') }}" class="btn btn-md btn-primary float-right">Tambah data</a>
                 </div>
@@ -20,9 +20,12 @@
                                 <th>SKS</th>
                                 <th>AKSI</th>
                             </tr>
+                            @php
+                                $id = 1;
+                            @endphp
                             @foreach ($makul as $mk)
                             <tr>
-                                <td>{{ $mk->id }}</td>
+                                <td>{{ $id++ }}</td>
                                 <td>{{ $mk->kd_makul }}</td>
                                 <td>{{ $mk->nm_makul }}</td>
                                 <td>{{ $mk->sks }}</td>

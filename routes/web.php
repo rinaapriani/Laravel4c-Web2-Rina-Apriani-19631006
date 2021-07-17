@@ -38,3 +38,12 @@ Route::POST('simpan-makul', 'makulController@store')->name('simpan.makul');
 Route::get('edit-makul/{id}', 'makulController@edit')->name('edit.makul');
 Route::POST('update-makul/{id}', 'makulController@update')->name('update.makul');
 Route::get('hapus-makul/{id}', 'makulController@destroy')->name('hapus.makul');
+
+//nilai
+Route::get('nilai', 'NilaiController@index')->name('nilai');
+Route::get('nilai-create', 'NilaiController@create')->name('nilai.create');
+Route::POST('simpan-nilai', 'NilaiController@store')->name('simpan.nilai');
+
+Route::get('edit-nilai/{id}', 'NilaiController@edit')->name('edit.nilai');
+Route::POST('update-nilai/{id}', 'NilaiController@update')->name('update.nilai');
+Route::get('hapus-nilai/{id}', 'NilaiController@destroy')->name('hapus.nilai');
