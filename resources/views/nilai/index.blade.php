@@ -22,10 +22,13 @@
                                 <th>NILAI</th>
                                 <th>AKSI</th>
                             </tr>
-                               
+                            @php
+                                $no = 1;
+                            @endphp
+
                             @foreach ($nilai as $n)
                         <tr>
-                            <td>{{ $n->id }}</td>
+                            <td>{{ $no++ }}</td>
                             <td>{{ $n->mahasiswa->npm}}</td>
                             <td>{{ $n->mahasiswa->user->name }}</td>
                             <td>{{ $n->makul->nm_makul }}</td>
